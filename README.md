@@ -1,4 +1,4 @@
-# Human Action Recognition using Sequence to Image (Seq2Im) sequence transformation
+# Human Action Recognition using skeleton Sequence to Image (Seq2Im) transformation
 A repository related to the papers:
 * Laraba, S., Brahimi, M., Tilmanne, J., & Dutoit, T. (2017). 3D skeleton‐based action recognition by representing motion capture sequences as 2D‐RGB images. Computer Animation and Virtual Worlds, 28(3-4), e1782.[[1](https://onlinelibrary.wiley.com/doi/abs/10.1002/cav.1782)]
 * Laraba, S., Tilmanne, J., & Dutoit, T. (2019, September). Leveraging Pre-trained CNN Models for Skeleton-Based Action Recognition. In International Conference on Computer Vision Systems (pp. 612-626). Springer, Cham. [[2](https://link.springer.com/chapter/10.1007/978-3-030-34995-0_56)]  
