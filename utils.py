@@ -1,6 +1,4 @@
 from matplotlib import colors as mcolors
-import smtplib
-
 
 def get_palet(number=5):
 	colors = dict(mcolors.BASE_COLORS, **mcolors.CSS4_COLORS)

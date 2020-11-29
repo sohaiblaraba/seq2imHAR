@@ -1,14 +1,8 @@
 import numpy as np
 import os
 from PIL import Image
-import cv2
-from copy import deepcopy
-import sys
 import glob
-
-import json
-import shutil
-
+import argparse
 import matplotlib.pyplot as plt
 
 
@@ -166,19 +160,23 @@ class Seq2Im:
 						plt.imsave(file_out, np.array(self.image))
 
 if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument('-f', '--file', help='path to sequence to be transformed', type=str, default = None, required=False)
+	parser.add_argument('-F', '--folder', help='path to the folder containing sequences to be transformed', type=str, default = None, required=False)
+	parser.add_argument('-o', '--output', help='path to output file or folder where images will saved', type=str, required=False)
+
+	args = parser.parse_args()
+	file = args.file
+	folder = args.folder
+	output = args.output
+
 	seq2im = Seq2Im()
 
-	# File
-	file = "data/examples/S001C001P001R001A001.txt"
-	output = "data/examples/S001C001P001R001A001.jpg"
-	seq2im.run(file=file, norm=4, output=output)
-	plt.imshow(seq2im.image)
-	plt.show()
+	if file is not None:
+		seq2im.run(file=file, norm=4, output=output)
+		plt.imshow(seq2im.image)
+		plt.show()
 
-	# Folder
-	# folder = "data"
-	# output = "data"	
-	# seq2im.run(folder=folder, norm=4, output=output)
-
-	
+	elif folder is not None:
+		seq2im.run(folder=folder, norm=4, output=output)
 
