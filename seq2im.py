@@ -12,7 +12,6 @@ import shutil
 import matplotlib.pyplot as plt
 
 
-
 class Seq2Im:
 	def __init__(self):
 		self.folder     = None
@@ -166,17 +165,20 @@ class Seq2Im:
 						file_out = name+'.jpg'
 						plt.imsave(file_out, np.array(self.image))
 
-
-
-
-		# plt.imshow(self.image)
-		# plt.show()
-
 if __name__ == "__main__":
-	file = "data/S001C001P001R001A001.txt"
-	fileout = "data/output.jpg"
-	folder = "data"
-	output = "data"
-
 	seq2im = Seq2Im()
-	seq2im.run(file=None, folder=folder, norm=4, output=output)
+
+	# File
+	file = "data/examples/S001C001P001R001A001.txt"
+	output = "data/examples/S001C001P001R001A001.jpg"
+	seq2im.run(file=file, norm=4, output=output)
+	plt.imshow(seq2im.image)
+	plt.show()
+
+	# Folder
+	# folder = "data"
+	# output = "data"	
+	# seq2im.run(folder=folder, norm=4, output=output)
+
+	
+
