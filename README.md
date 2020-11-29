@@ -80,7 +80,7 @@ dataset __ train __ A001
                    |__ file_a999_999.jpg  
 ```
 
-  * You can download the NTU RGB+D dataset (49 classes):
+  * You can download the converted NTU RGB+D dataset (49 classes):
     * cross subject protocol from [here](https://drive.google.com/file/d/1Okt4uh9FcoDg2X8LRoYzUZG7XriTX6aw/view?usp=sharing).
     * cross vieww protocol from [here](https://drive.google.com/file/d/1NxrFqHsw4CmuhR5eEtCa3PREVltIyRuh/view?usp=sharing).
 
